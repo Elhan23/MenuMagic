@@ -1,0 +1,23 @@
+.home_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .animation_rice {
+    max-width: 30%;
+    max-height: 20%;
+  }
+
+  & .font_family_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & h1 {
+      font-family: "Roboto", Roboto;
+    }
+
+    & p {
+      font-family: "Roboto", Roboto;
+    }
+  }
+}
