@@ -1,27 +1,7 @@
-.work_block {
-  display: flex;
-  margin-top: 100px;
-  flex-direction: column;
-  align-items: center;
-
-  .find_class {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    h2 {
-      margin-bottom: 0;
-      font-family: "Roboto", Roboto;
-      font-size: 24px;
-    }
-  }
-
-  hr {
-    background-color:cornflowerblue;
-    height: 8px;
-    max-width: 200px;
-    width: 100%;
-    margin: 20px 0;
+.section_style{
+    
+  & .background_section{
+     background-color:  #3FC66E;
+    height: 400px;
   }
 }
