@@ -1,0 +1,33 @@
+.partner_style {
+  margin-top: 80px;
+
+  .delivery {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: cornflowerblue;
+    max-width: 300px;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    padding: 20px; 
+    border-radius: 45px; 
+    margin: 0 auto; 
+  }
+
+
+  .delivery:hover{
+     background-color:cadetblue;
+  }
+
+  .swiper_style {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: 40px;
+
+    & img {
+      max-width: 200px;
+      border-radius: 50px;
+    }
+  }
+}
