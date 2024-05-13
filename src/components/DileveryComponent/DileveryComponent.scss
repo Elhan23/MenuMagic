@@ -1,0 +1,27 @@
+.product_style{
+   display: flex;
+   align-items: center;
+   margin-top: 120px;
+   gap: 50px;
+   background-color:cornflowerblue;
+   max-height: 500px;
+   padding: 20px 0;
+
+
+   & .product_text{
+       display: flex;
+       flex-direction: column;
+       gap: 40px;
+
+      & h2{
+         color: white;
+         font-family: Open Sans, "Open Sans";
+       }
+
+      & p{
+         color: white;
+         font-family: Open Sans, "Open Sans";
+       }
+   }
+
+}
