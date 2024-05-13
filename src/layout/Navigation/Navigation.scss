@@ -9,12 +9,9 @@
     gap: 30px;
 
     .logo_class {
-      max-width: 400px;
-      max-height: 400px;
-
-      img {
-        max-width: 100%;
-        height: 60px;
+      & img {
+        width: 250px;
+        height: 250px;
       }
     }
   }
@@ -29,35 +26,64 @@
     display: flex;
     align-items: center;
     gap: 40px;
+
+    & .shop_background {
+      background-color: #57a6a8;
+      padding: 2px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      width: 50px;
+      transition: background-color 0.3s ease;
+    }
+
+    & .shop_background:hover {
+      background-color: cornflowerblue;
+    }
+  }
+  li {
+    list-style-type: none;
   }
 
   a {
     text-decoration: none;
     color: cadetblue;
+    font-family: "Fredoka", Fredoka;
     position: relative;
 
     &:not(.button_shop_style a):hover::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
-      bottom: -3px; 
+      bottom: -3px;
       width: 100%;
       height: 0;
       border-radius: 5px;
-      background-color: #7EB693;
-      transform: scaleX(0); 
-      transition: transform 0.3s ease; 
+      background-color: #7eb693;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
     }
 
     &:not(.button_shop_style a):hover::after {
-      height: 2px; 
-      transform: scaleX(1); 
+      height: 2px;
+      transform: scaleX(1);
     }
   }
 
-  .button_shop_style a,
-  .button_shop_style button {
-    text-decoration: none;
-    color: cadetblue;
+  & .button_shop_style {
+    & button {
+      color: white;
+      background-color: cadetblue;
+      border: none;
+      border-radius: 10px;
+      height: 30px;
+      width: 100px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    & button:hover {
+      background-color: cornflowerblue;
+    }
   }
 }
