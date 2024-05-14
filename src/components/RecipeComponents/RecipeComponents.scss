@@ -3,6 +3,7 @@
   align-items: center;
   gap: 150px;
   margin-top: 150px !important;
+  max-width: 100% !important;
   background-color: cadetblue;
   & .recipe_image {
     max-width: 400px;
@@ -35,8 +36,8 @@
       color: white;
     }
 
-    a{
-       color: aliceblue;
+    a {
+      color: aliceblue;
     }
   }
 }
