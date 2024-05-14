@@ -1,89 +1,99 @@
-.navigation_flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.background_navigation {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  height: 95px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 
-  .flex_logo {
+  & .navigation_flex {
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
 
-    .logo_class {
-      & img {
-        width: 250px;
-        height: 250px;
+   & .flex_logo {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .logo_class {
+        & img {
+          width: 250px;
+          height: 250px;
+        }
       }
     }
-  }
 
-  ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .button_shop_style {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-
-    & .shop_background {
-      background-color: #57a6a8;
-      padding: 2px;
-      border-radius: 10px;
+   & ul {
       display: flex;
-      justify-content: center;
-      width: 50px;
-      transition: background-color 0.3s ease;
+      align-items: center;
+      gap: 30px;
     }
 
-    & .shop_background:hover {
-      background-color: cornflowerblue;
+   & .button_shop_style {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      .shop_background {
+        background-color: #57a6a8;
+        border-radius: 10px;
+        justify-content: center;
+        width: 50px;
+        height: 45px;
+        transition: background-color 0.3s ease;
+      }
+
+      .shop_background:hover {
+        background-color: cornflowerblue;
+      }
     }
-  }
-  li {
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: cadetblue;
-    font-family: "Fredoka", Fredoka;
-    position: relative;
-
-    &:not(.button_shop_style a):hover::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 100%;
-      height: 0;
-      border-radius: 5px;
-      background-color: #7eb693;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
+   & li {
+      list-style-type: none;
     }
 
-    &:not(.button_shop_style a):hover::after {
-      height: 2px;
-      transform: scaleX(1);
-    }
-  }
+   &  a {
+      text-decoration: none;
+      color: cadetblue;
+      font-family: "Fredoka", Fredoka;
+      position: relative;
 
-  & .button_shop_style {
-    & button {
-      color: white;
-      background-color: cadetblue;
-      border: none;
-      border-radius: 10px;
-      height: 30px;
-      width: 100px;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
+      &:not(.button_shop_style a):hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 0;
+        border-radius: 5px;
+        background-color: #7eb693;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      &:not(.button_shop_style a):hover::after {
+        height: 2px;
+        transform: scaleX(1);
+      }
     }
 
-    & button:hover {
-      background-color: cornflowerblue;
+    & .button_shop_style {
+      & button {
+        font-family: monospace;
+        background-color: #f3f7fe;
+        border: none;
+        border-radius: 8px;
+        width: 100px;
+        height: 45px;
+        transition: 0.3s;
+      }
+
+      & button:hover {
+        background-color: #7eb693;
+        box-shadow: 0 0 0 5px #3b83f65f;
+        color: #fff;
+      }
     }
   }
 }

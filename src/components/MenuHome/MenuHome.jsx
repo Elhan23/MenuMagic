@@ -1,6 +1,5 @@
 import food from "../../assets/animation/salad.json";
 import Lottie from "lottie-react";
-import Main from "../Main/Main";
 import "./MenuHome.scss";
 
 function MenuHome() {
@@ -25,7 +24,6 @@ function MenuHome() {
           </div>
         </div>
       </div>
-      <Main />
     </div>
   );
 }

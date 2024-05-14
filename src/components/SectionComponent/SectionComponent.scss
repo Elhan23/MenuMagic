@@ -1,0 +1,32 @@
+.section_style {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+
+  & .salad_style {
+    max-width: 450px;
+    background-color: #e1f2e1;
+    border-radius: 600px;
+    & img {
+      width: 100%;
+      max-height: 600px;
+    }
+  }
+
+  & .text_style {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    & p {
+      font-family: "Open Sans", Open Sans;
+      color: white;
+    }
+  }
+
+  & h2 {
+    font-family: "Open Sans", Open Sans;
+    font-size: 25px;
+    color: white;
+  }
+}

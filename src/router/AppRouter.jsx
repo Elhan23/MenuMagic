@@ -18,7 +18,7 @@ function AppRouter() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/aboutmenu" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/recipe" element={<Menu />} />
           <Route path="/chef" element={<Chef />} />
           <Route path="/shop" element={<Shop />} />
         </Routes>
