@@ -1,0 +1,42 @@
+.recipe_style {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+  margin-top: 150px !important;
+  background-color: cadetblue;
+  & .recipe_image {
+    max-width: 400px;
+    max-height: 400px;
+
+    & img {
+      max-width: 100%;
+      transition: transform 0.5s;
+      height: 100%;
+    }
+
+    & img:hover {
+      transform: translateY(-50px);
+      transition: 0.3s;
+    }
+  }
+
+  & .recipe_text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    & h2 {
+      font-family: Opens Sans, "Open Sans";
+      color: white;
+      font-size: 28px;
+    }
+
+    & p {
+      font-family: Opens Sans, "Open Sans";
+      color: white;
+    }
+
+    a{
+       color: aliceblue;
+    }
+  }
+}
