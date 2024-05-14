@@ -16,9 +16,7 @@ import { NavLink } from "react-router-dom";
 function PartnerComponent() {
   return (
     <div className="partner_style">
-      <div className="delivery">
-        <h2>Our delivery partners</h2>
-      </div>
+      <h2>Our delivery partners</h2>
       <Marquee pauseOnHover={false}>
         <div className="swiper_style">
           <NavLink to="https://eda.yandex.ru/Bishkek?shippingType=delivery">

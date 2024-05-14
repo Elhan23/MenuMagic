@@ -4,8 +4,8 @@ import "./Navigation.scss";
 
 function Nav() {
   return (
-    <div className="container">
-      <div className="navigation_flex">
+    <nav className="background_navigation"> 
+      <div className="navigation_flex container">
         <div className="flex_logo">
           <ul>
             <li><Link to="/">MenuMagic</Link></li>
@@ -32,7 +32,7 @@ function Nav() {
           </li>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
