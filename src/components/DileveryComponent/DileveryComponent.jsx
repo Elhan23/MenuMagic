@@ -1,10 +1,10 @@
-import person from "../../assets/images/person.png";
+import person from "../../assets/images/humanshop.jpg";
 import "./DileveryComponent.scss";
 
 function DileveryComponent() {
   return (
     <section className="container product_style">
-      <div>
+      <div className="person_img">
         <img src={person} alt="" />
       </div>
 
