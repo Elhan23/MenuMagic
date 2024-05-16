@@ -43,6 +43,12 @@
         width: 50px;
         height: 45px;
         transition: background-color 0.3s ease;
+
+
+        & .shop_svg{
+           color: white;
+           max-width: 30px;
+        }
       }
 
       .shop_background:hover {
@@ -58,6 +64,7 @@
       color: cadetblue;
       font-family: "Fredoka", Fredoka;
       position: relative;
+
 
       &:not(.button_shop_style a):hover::after {
         content: "";
@@ -76,6 +83,10 @@
         height: 2px;
         transform: scaleX(1);
       }
+    }
+
+    & a:active{
+      color: black;
     }
 
     & .button_shop_style {

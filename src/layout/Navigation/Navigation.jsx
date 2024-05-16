@@ -4,24 +4,36 @@ import "./Navigation.scss";
 
 function Nav() {
   return (
-    <nav className="background_navigation"> 
+    <nav className="background_navigation">
       <div className="navigation_flex container">
         <div className="flex_logo">
           <ul>
-            <li><Link to="/">MenuMagic</Link></li>
+            <li>
+              <Link to="/">MenuMagic</Link>
+            </li>
           </ul>
         </div>
         <ul>
-          <li><Link to="/recipe">Recipe</Link></li>
-          <li><Link to="/aboutmenu">About us</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/chef">Chef</Link></li>
+          <li>
+            <Link to="/recipe">Recipe</Link>
+          </li>
+          <li>
+            <Link to="/aboutmenu">About us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link to="/chef">Chef</Link>
+          </li>
         </ul>
         <div className="button_shop_style">
           <ul className="shop_background">
             <li>
               <Link to="/shop">
-                <RiShoppingBasket2Line style={{ fontSize: '20px', color: "white" }} />
+                <div className="shop_svg">
+                  <RiShoppingBasket2Line />
+                </div>
               </Link>
             </li>
           </ul>
