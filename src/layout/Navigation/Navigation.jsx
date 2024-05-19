@@ -6,13 +6,12 @@ function Nav() {
   return (
     <nav className="background_navigation">
       <div className="navigation_flex container">
-        <div className="flex_logo">
-          <ul>
-            <li>
-              <Link to="/">MenuMagic</Link>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li>
+            <Link to="/">MenuMagic</Link>
+          </li>
+        </ul>
+
         <ul>
           <li>
             <Link to="/recipe">Recipe</Link>
@@ -39,7 +38,12 @@ function Nav() {
           </ul>
           <li>
             <Link to="/registration">
-              <button>Log In</button>
+              <button>
+                  Log In
+                <div class="arrow-wrapper">
+                  <div class="arrow"></div>
+                </div>
+              </button>
             </Link>
           </li>
         </div>

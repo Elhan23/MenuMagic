@@ -2,7 +2,7 @@
   background-color: #ffffff;
   position: fixed;
   top: 0;
-  height: 95px;
+  height: 70px;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -11,100 +11,57 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+  }
 
-   & .flex_logo {
-      display: flex;
-      align-items: center;
-      gap: 30px;
+  & ul {
+    display: flex;
+    gap: 30px;
+  }
 
-      .logo_class {
-        & img {
-          width: 250px;
-          height: 250px;
-        }
-      }
-    }
+  & li{
+     list-style-type: none;
+  }
 
-   & ul {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
+  & a {
+     text-decoration: none;
+     font-family: Open Sans, "Open Sans";
+     color:cadetblue;
+  }
 
-   & .button_shop_style {
-      display: flex;
-      align-items: center;
-      gap: 40px;
+  & a:hover{
+     color:black;
+     transition: 0.5s;
+  }
 
-      .shop_background {
-        background-color: #57a6a8;
-        border-radius: 10px;
-        justify-content: center;
-        width: 50px;
-        height: 45px;
-        transition: background-color 0.3s ease;
+  & .button_shop_style {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 
-
-        & .shop_svg{
-           color: white;
-           max-width: 30px;
-        }
-      }
-
-      .shop_background:hover {
-        background-color: cornflowerblue;
-      }
-    }
-   & li {
-      list-style-type: none;
-    }
-
-   &  a {
-      text-decoration: none;
-      color: cadetblue;
-      font-family: "Fredoka", Fredoka;
-      position: relative;
-
-
-      &:not(.button_shop_style a):hover::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -3px;
+  & .shop_svg{
+      max-width: 50px;
+      max-height: 50px;
+    & svg {
         width: 100%;
-        height: 0;
-        border-radius: 5px;
-        background-color: #7eb693;
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
-      }
-
-      &:not(.button_shop_style a):hover::after {
-        height: 2px;
-        transform: scaleX(1);
-      }
-    }
-
-    & a:active{
-      color: black;
-    }
-
-    & .button_shop_style {
-      & button {
-        font-family: monospace;
-        background-color: #f3f7fe;
-        border: none;
-        border-radius: 8px;
-        width: 100px;
-        height: 45px;
-        transition: 0.3s;
-      }
-
-      & button:hover {
-        background-color: #7eb693;
-        box-shadow: 0 0 0 5px #3b83f65f;
-        color: #fff;
-      }
+        height: 100%;
     }
   }
+
+   & button {
+     background-color: white;
+     border: none;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     border-radius: 20px;
+     height: 30px;
+     width: 100px;
+     cursor: pointer;
+   }
+
+   & button:hover {
+     background-color: cadetblue;
+     color: white;
+     transition: 1s;
+   }
 }

@@ -1,4 +1,4 @@
-import review from "../../assets/images/review.jpg";
+import review from "../../assets/images/sectionimg/review.jpg";
 import "./ContactSection.scss";
 
 function ContactSection() {

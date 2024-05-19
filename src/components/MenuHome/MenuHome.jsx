@@ -1,6 +1,5 @@
-import food from "../../assets/animation/salad.json";
-import Lottie from "lottie-react";
 import "./MenuHome.scss";
+import salad from '../../assets/images/sectionimg/salad.png'
 
 function MenuHome() {
   return (
@@ -13,14 +12,15 @@ function MenuHome() {
           <p>
             Discover the magic of cooking and discover an endless world of
             flavors and aromas. <br /> Cook with love, experiment with your{" "}
-            <br /> imagination and discover new gastronomic horizons every day  <br />
+            <br /> imagination and discover new gastronomic horizons every day{" "}
+            <br />
             "Explore, create, enjoy: your journey on our website!"
           </p>
         </div>
 
         <div className="animation_rice">
           <div className="animation_width">
-            <Lottie animationData={food} />
+            <img src={salad} alt="" />
           </div>
         </div>
       </div>
