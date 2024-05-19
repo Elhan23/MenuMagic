@@ -1,4 +1,4 @@
-import person from "../../assets/images/humanshop.jpg";
+import person from "../../assets/images/sectionimg/humanshop.jpg";
 import "./DileveryComponent.scss";
 
 function DileveryComponent() {

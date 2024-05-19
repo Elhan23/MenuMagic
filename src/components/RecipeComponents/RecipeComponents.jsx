@@ -1,10 +1,10 @@
-import recipehuman from "../../assets/images/recipehuman.png";
+import recipehuman from "../../assets/images/sectionimg/recipehuman.png";
 import { Link } from "react-router-dom";
 import "./RecipeComponents.scss";
 
 function RecipeComponents() {
   return (
-    <div className="container recipe_style">
+    <section className="container recipe_style">
       <div className="recipe_image">
         <img src={recipehuman} alt="" />
       </div>
@@ -21,7 +21,7 @@ function RecipeComponents() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

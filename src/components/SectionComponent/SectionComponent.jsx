@@ -1,11 +1,11 @@
 import React from "react";
-import salad from "../../assets/images/salad.png";
+import salad from "../../assets/images/sectionimg/food.jpg";
 import "./SectionComponent.scss";
 
 function SectionConponent() {
   return (
-    <div className="container">
-      <section className="section_style ">
+    <div className=" sectipon_background">
+      <section className="section_style  container">
         <div className="salad_style">
           <img src={salad} alt="salad" />
         </div>

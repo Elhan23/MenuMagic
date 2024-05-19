@@ -2,9 +2,11 @@ import React from 'react'
 
 function Registration() {
   return (
-    <form>
-      
-    </form>
+      <div>
+          <form>
+                <input type="name" />
+          </form>
+      </div>
   )
 }
 

@@ -3,7 +3,7 @@
   align-items: center;
   margin-top: 150px !important;
   gap: 60px;
-  max-height: 550px;
+  
 
   & .product_text {
     display: flex;
@@ -17,6 +17,7 @@
 
     & p {
       font-family: Open Sans, "Open Sans";
+      color: black;
       font-size: 18px;
     }
   }
@@ -27,6 +28,7 @@
 
     & img {
       width: 100%;
+      border-radius: 60px;
       height: 100%;
     }
   }
