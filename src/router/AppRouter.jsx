@@ -1,7 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import HomeMenu from "../pages/HomeMenu/HomeMenu";
 import Menu from "../pages/Menu/Menu";
-import About from "../pages/About/About";
+import About from "../pages/AboutUs/About";
 import Chef from "../pages/Chef/Chef";
 import Contact from "../pages/Contact/Contact";
 import Shop from "../pages/Shop/Shop";
