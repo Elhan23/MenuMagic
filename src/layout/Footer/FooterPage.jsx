@@ -52,7 +52,7 @@ function Footer() {
           <Lottie animationData={catanimaton} />
         </div>
       </div>
-      <span className="copyring"><p>Copyright c 2024 MenuMagic</p></span>
+      <span className="copyring"><p>Copyright ©  2024 MenuMagic</p></span>
     </footer>
   );
 }

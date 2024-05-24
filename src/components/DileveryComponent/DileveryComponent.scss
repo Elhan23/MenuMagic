@@ -1,35 +1,36 @@
 .product_style {
   display: flex;
   align-items: center;
+  gap: 150px;
   margin-top: 150px !important;
-  gap: 60px;
-  
+  max-width: 100% !important;
+ 
+
+  & .person_img {
+    max-width: 400px;
+    max-height: 400px;
+
+    & img {
+      max-width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
 
   & .product_text {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 
     & h2 {
-      font-family: Open Sans, "Open Sans";
+      font-family: "Open Sans", sans-serif;
       color: cadetblue;
+      font-size: 28px;
     }
 
     & p {
-      font-family: Open Sans, "Open Sans";
+      font-family: "Open Sans", sans-serif;
       color: black;
-      font-size: 18px;
-    }
-  }
-
-  .person_img {
-    max-width: 500px;
-    max-height: 500px;
-
-    & img {
-      width: 100%;
-      border-radius: 60px;
-      height: 100%;
     }
   }
 }
