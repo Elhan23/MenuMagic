@@ -1,16 +1,14 @@
-import React from 'react';
-import Main from '../../components/Main/Main';
-import HomeComponent from '../../components/HomeComponent/HomeComponent';
+import React from "react";
+import Main from "../../components/Main/Main";
 
 function HomeMenu() {
   return (
-     <div>
-         <div>
-             <HomeComponent/>
-             <Main/>
-         </div>
-     </div>
-  )
+    <div>
+      <div>
+        <Main />
+      </div>
+    </div>
+  );
 }
 
-export default HomeMenu
+export default HomeMenu;
