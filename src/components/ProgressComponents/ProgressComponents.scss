@@ -3,8 +3,8 @@
   align-items: center;
   gap: 100px;
   & .progress_img {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 500px;
+    max-height: 500px;
 
     & img {
       max-width: 100%;
@@ -30,4 +30,6 @@
       color: cadetblue;
     }
   }
+
+  
 }
