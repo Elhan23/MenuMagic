@@ -27,7 +27,7 @@ const imgAnimation = {
     x: 0,
     transition: {
       duration: 0.5,
-      delay: 0.5, // Delay the image animation to start after the text animation
+      delay: 0.5, 
     },
   },
 };
@@ -39,7 +39,7 @@ function SectionComponent() {
         className="section_style container"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }} // Animation will trigger once when 50% of the section is in view
+        viewport={{ once: true, amount: 0.5 }} 
       >
         <motion.div className="salad_style" variants={imgAnimation}>
           <img src={salad} alt="salad" />

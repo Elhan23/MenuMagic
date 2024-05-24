@@ -1,12 +1,12 @@
-import React from 'react'
-import MenuHome from '../../components/MenuHome/MenuHome'
-import Main from '../../components/Main/Main'
+import React from 'react';
+import Main from '../../components/Main/Main';
+import HomeComponent from '../../components/HomeComponent/HomeComponent';
 
 function HomeMenu() {
   return (
      <div>
          <div>
-             <MenuHome/>
+             <HomeComponent/>
              <Main/>
          </div>
      </div>

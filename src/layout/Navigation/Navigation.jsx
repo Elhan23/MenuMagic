@@ -38,7 +38,7 @@ function Nav() {
             <Link to="/recipe">Recipe</Link>
           </li>
           <li>
-            <Link to="/aboutmenu">About us</Link>
+            <Link to="/about">About us</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>

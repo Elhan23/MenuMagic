@@ -1,15 +1,51 @@
+import React from "react";
 import recipehuman from "../../assets/images/sectionimg/recipehuman.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./RecipeComponents.scss";
+
+const textAnimationRecipe = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const imgAnimationRecipe = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      delay: 0.5,
+    },
+  },
+};
 
 function RecipeComponents() {
   return (
-    <section className="container recipe_style">
-      <div className="recipe_image">
-        <img src={recipehuman} alt="" />
-      </div>
+    <motion.section
+      className="container recipe_style"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      <motion.div className="recipe_image" variants={imgAnimationRecipe}>
+        <img src={recipehuman} alt="Recipe Human" />
+      </motion.div>
 
-      <div className="recipe_text">
+      <motion.div className="recipe_text" variants={textAnimationRecipe}>
         <h2>Don't know what to cook?</h2>
         <div>
           <p>
@@ -20,8 +56,8 @@ function RecipeComponents() {
             <Link to='/recipe'>View all</Link>
           </p>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
 
