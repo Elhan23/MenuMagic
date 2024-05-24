@@ -1,8 +1,8 @@
 import food from "../../assets/animation/salad.json";
 import Lottie from "lottie-react";
-import "./MenuHome.scss";
+import './HomeComponent.scss';
 
-function MenuHome() {
+function HomeComponent() {
   return (
     <div className="container">
       <div className="home_flex">
@@ -28,4 +28,4 @@ function MenuHome() {
   );
 }
 
-export default MenuHome;
+export default  HomeComponent;
