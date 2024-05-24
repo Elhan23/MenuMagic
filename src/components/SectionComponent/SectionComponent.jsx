@@ -1,16 +1,51 @@
 import React from "react";
-import salad from "../../assets/images/salad.png";
+import salad from "../../assets/images/sectionimg/food.jpg";
 import "./SectionComponent.scss";
+import { motion } from "framer-motion";
 
-function SectionConponent() {
+const textAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const imgAnimation = {
+  hidden: {
+    opacity: 0,
+    x: 50,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      delay: 0.5, 
+    },
+  },
+};
+
+function SectionComponent() {
   return (
-    <div className="container">
-      <section className="section_style ">
-        <div className="salad_style">
+    <div className="sectipon_background">
+      <motion.section
+        className="section_style container"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }} 
+      >
+        <motion.div className="salad_style" variants={imgAnimation}>
           <img src={salad} alt="salad" />
-        </div>
+        </motion.div>
 
-        <div className="text_style">
+        <motion.div className="text_style" variants={textAnimation}>
           <h2>
             On our Menu Magic platform, you can search for delicious recipes or
             earn money by sharing your culinary talents with others.
@@ -25,10 +60,10 @@ function SectionConponent() {
               of taste and income!
             </p>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </div>
   );
 }
 
-export default SectionConponent;
+export default SectionComponent;

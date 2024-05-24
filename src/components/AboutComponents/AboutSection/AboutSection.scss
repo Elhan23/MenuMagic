@@ -1,0 +1,48 @@
+.background_section {
+  padding: 50px;
+  background: url('/path/to/your/background.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.aboutsection_style {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 20px;
+
+  .text_style_about {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      font-family: "Open Sans", Open Sans;
+      font-size: 25px;
+      color: black;
+      font-weight: 500;
+    }
+
+    span {
+      font-family: "Open Sans", Open Sans;
+      font-size: 18px;
+      color: black;
+    }
+  }
+}
+
+.about_offer_style {
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  margin-top: 50px;
+
+  p {
+    font-size: 17px;
+    color: black;
+    font-family: "Open Sans", Open Sans;
+  }
+}
