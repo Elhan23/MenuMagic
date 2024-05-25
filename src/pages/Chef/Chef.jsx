@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import React from 'react'
 
 function Chef() {
   return (
     <div>
-      Hello
+      Chef
     </div>
-  );
+  )
 }
 
-export default Chef;
+export default Chef
