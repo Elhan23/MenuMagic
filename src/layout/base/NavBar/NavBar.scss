@@ -1,0 +1,25 @@
+.navbar_style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    gap: 30px;
+
+    & li {
+      list-style-type: none;
+    }
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+
+  .logo_text_style{
+     display: flex;
+     align-items: center;
+     gap: 20px;
+  }
+}
