@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Contact() {
+function FooterPage() {
   return (
     <div>
-      Contact
+      
     </div>
   )
 }
 
-export default Contact
+export default FooterPage
