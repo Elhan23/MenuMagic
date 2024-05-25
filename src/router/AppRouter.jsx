@@ -1,5 +1,5 @@
 import { useRoutes } from "react-router-dom";
-import HomePage from "../pages/HomePages/HomePages";
+import HomePage from "../pages/Home/Home";
 import Menu from "../pages/Menu/Menu";
 import AboutUs from '../pages/AboutUs/AboutUs'
 import Chef from "../pages/Chef/Chef";
