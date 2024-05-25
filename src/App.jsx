@@ -7,7 +7,6 @@ function App() {
     <>
       <Layout>
         <AppRouter />
-        wq3r6
       </Layout>
     </>
   );
