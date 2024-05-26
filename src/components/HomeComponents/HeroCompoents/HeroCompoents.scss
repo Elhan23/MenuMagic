@@ -1,5 +1,5 @@
 .hero_bg {
-  background-image: url("../../assets/images/hero.png");
+  background-image: url("../../../assets/images/hero.png");
   background-size: cover;
   height: 100vh;
   border-radius: 32px;
@@ -15,6 +15,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  gap: 30px;
   align-items: center;
 
   & h1 {
@@ -25,5 +26,15 @@
 
   & p {
     color: white;
+    font-family: "Roboto", Roboto;
+    font-size: 18px;
+  }
+
+  & button{
+     background-color: #F29C33;
+     border-radius: 24px;
+     border: none;
+     padding: 15px;
+     cursor: pointer;
   }
 }

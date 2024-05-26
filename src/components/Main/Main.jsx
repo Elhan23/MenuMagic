@@ -1,11 +1,11 @@
 import React from 'react'
 
-function AboutUs() {
+function Main() {
   return (
     <div>
-      
+        
     </div>
   )
 }
 
-export default AboutUs
+export default Main
