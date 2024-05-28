@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 
 function FormRegister() {
+
+   
   const {
     register,
     formState: { errors },
@@ -24,7 +27,7 @@ function FormRegister() {
         {errors?.example && <p>{errors?.example?.message || "Error!"}</p>}
       </div>
 
-      <input type="submit" />
+      <input type="submit" onClick={() => dispatch({registration})}/>
     </form>
   );
 }
