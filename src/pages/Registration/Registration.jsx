@@ -1,12 +1,9 @@
 import React from 'react'
+import FormRegister from '../../components/FormRegister/FormRegister'
 
 function Registration() {
   return (
-      <div>
-          <form>
-                <input type="name" />
-          </form>
-      </div>
+    <FormRegister/>
   )
 }
 

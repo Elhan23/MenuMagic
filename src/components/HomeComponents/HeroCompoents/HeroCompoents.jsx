@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function HeroComponents() {
   return (
-    <div className="hero_bg">
+    <section className="hero_bg">
       <div className="hero_text">
         <h1>
           Unleash Culinary <br /> Excellence
@@ -17,7 +17,7 @@ function HeroComponents() {
           <button>EXPLORE RECIPES</button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 
