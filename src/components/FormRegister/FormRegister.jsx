@@ -1,33 +1,31 @@
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
+import { registerUser } from "../slices/formSlice";
 
 function FormRegister() {
-
-   
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+  const dispatch = useDispatch();
+  const { register, formState: { errors }, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    console.log(JSON.stringify(data));
+    dispatch(registerUser(data));
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>
         Full name
         <input
-          {...register("example", {
+          {...register("fullName", {
             required: "Required field",
           })}
         />
       </label>
       <div>
-        {errors?.example && <p>{errors?.example?.message || "Error!"}</p>}
+        {errors?.fullName && <p>{errors?.fullName?.message || "Error!"}</p>}
       </div>
 
-      <input type="submit" onClick={() => dispatch({registration})}/>
+      <input type="submit" />
     </form>
   );
 }

@@ -1,45 +1,41 @@
+// src/slices/formSlice.js
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Асинхронный thunk для получения пользователей
-export const getUsers = createAsyncThunk(
-  "users/getUsers",
-  async (_, { rejectWithValue }) => {
+// Асинхронный thunk для регистрации пользователя
+export const registerUser = createAsyncThunk(
+  "registration/registerUser",
+  async (userData, { rejectWithValue }) => {
     try {
-      const res = await axios.get("http://localhost:8080/api/registration");
-      return res.data;
+      const response = await axios.post("http://localhost:8080/api/registration", userData);
+      return response.data;
     } catch (error) {
-      console.error("Error fetching users:", error); // Вывод ошибки в консоль
-      return rejectWithValue(error.response?.data || "Error fetching users");
+      return rejectWithValue(error.response?.data || "Error registering user");
     }
   }
 );
 
-// Создание slice
-const usersSlice = createSlice({
-  name: "users",
+const formSlice = createSlice({
+  name: "registration",
   initialState: {
-    users: [],
-    user: null,
     loading: false,
-    error: "",
+    error: null,
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getUsers.pending, (state) => {
+      .addCase(registerUser.pending, (state) => {
         state.loading = true;
+        state.error = null;
       })
-      .addCase(getUsers.fulfilled, (state, action) => {
+      .addCase(registerUser.fulfilled, (state) => {
         state.loading = false;
-        state.users = action.payload;
       })
-      .addCase(getUsers.rejected, (state, action) => {
+      .addCase(registerUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
-        console.error("Error:", action.payload); 
       });
   },
 });
 
-export default usersSlice.reducer;
+export default formSlice.reducer;
