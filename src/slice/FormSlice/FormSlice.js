@@ -1,13 +1,14 @@
-// src/slices/formSlice.js
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Асинхронный thunk для регистрации пользователя
 export const registerUser = createAsyncThunk(
   "registration/registerUser",
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:8080/api/registration", userData);
+      const response = await axios.post(
+        "http://localhost:8080/api/registration",
+        userData
+      );
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || "Error registering user");

@@ -6,3 +6,5 @@ export const  store = configureStore({
        registration: FormSlice
    }
 })
+
+export default store;
