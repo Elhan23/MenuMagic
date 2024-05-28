@@ -1,13 +1,13 @@
 .hero_bg {
   background-image: url("../../../assets/images/hero.png");
   background-size: cover;
-  height: 100vh;
+  height: 580px;
   border-radius: 32px;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero_text {
@@ -21,7 +21,8 @@
   & h1 {
     font-family: "Roboto", Roboto;
     font-size: 70px;
-    color: white;
+    font-weight: bold;
+    color: #f0ebe1;
   }
 
   & p {
@@ -30,11 +31,11 @@
     font-size: 18px;
   }
 
-  & button{
-     background-color: #F29C33;
-     border-radius: 24px;
-     border: none;
-     padding: 15px;
-     cursor: pointer;
+  & button {
+    background-color: #f29c33;
+    border-radius: 24px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
   }
 }

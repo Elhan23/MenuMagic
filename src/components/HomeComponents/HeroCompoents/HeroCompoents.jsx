@@ -7,7 +7,7 @@ function HeroComponents() {
     <section className="hero_bg">
       <div className="hero_text">
         <h1>
-          Unleash Culinary <br /> Excellence
+          UNLEASH CULINARY <br /> EXCELLENCE
         </h1>
         <p>
           Explore a world of flavors, discover <br /> handcrafted recipes, and
