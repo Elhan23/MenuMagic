@@ -6,8 +6,12 @@ import Footer from "./base/Footer/Footer";
 function Layout({ children }) {
   const location = useLocation();
   const showLayout = !["/registration"].includes(location.pathname);
+  const showLayout2 = !["/gurmanlogin"].includes(location.pathname);
 
   if (!showLayout) {
+    return <>{children}</>;
+  }
+  if (!showLayout2) {
     return <>{children}</>;
   }
   return (

@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import FormSlice from '../slice/FormSlice/FormSlice'
+import { getUser } from "../slice/getUser/getUser";
 
-export const  store = configureStore({
-   reducer: {
-       registration: FormSlice
-   }
-})
+export const store = configureStore({
+  reducer: {
+    user: getUser,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(false),
+});
 
 export default store;

@@ -1,10 +1,8 @@
-import React from 'react'
-import FormRegister from '../../components/FormRegistration/FormRegister/FormRegister'
+import UserCard from "../../components/FormRegistration/UserCard/UserCard";
+
 
 function Registration() {
-  return (
-    <FormRegister/>
-  )
+  return <UserCard />;
 }
 
-export default Registration
+export default Registration;
