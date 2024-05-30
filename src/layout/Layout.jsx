@@ -7,6 +7,7 @@ function Layout({ children }) {
   const location = useLocation();
   const showLayout = !["/registration"].includes(location.pathname);
   const showLayout2 = !["/gurmanlogin"].includes(location.pathname);
+  const showLayout3 = !["/cooklogin"].includes(location.pathname);
 
   if (!showLayout) {
     return <>{children}</>;
@@ -14,6 +15,11 @@ function Layout({ children }) {
   if (!showLayout2) {
     return <>{children}</>;
   }
+  if (!showLayout3) {
+    return <>{children}</>;
+  }
+
+
   return (
     <div>
       <Header />

@@ -1,9 +1,9 @@
-import "./FormRegister.scss";
-import imagelog from "../../../assets/images/sectionimg/Imagelog.png";
-import logo from "../../../assets/images/logo.svg";
 import { useForm } from "react-hook-form";
-import { getUser } from "../../../slice/getUser/getUser";
+import { getUser } from "../../../store/slice/getUser/getUser";
 import { useDispatch } from "react-redux";
+import "./FormRegister.scss";
+import logo from "../../../assets/images/logo/logo.svg";
+import bg_video from "../../../assets/video/registration_bg.mp4";
 
 function FormRegister() {
   const dispatch = useDispatch();
@@ -14,18 +14,14 @@ function FormRegister() {
   } = useForm();
 
   const onSubmit = (data) => {
-     console.log(dispatch(getUser(data)));
+    console.log(dispatch(getUser(data)));
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="form_style">
-        <div className="imagelog_style">
-          <img src={imagelog} alt="imagelog" />
-        </div>
-
-        <span className="signup_style">
-          <img src={logo} alt="logo" />
+    <form onSubmit={handleSubmit(onSubmit)} className="form_style">
+      <div className="signup_style">
+        <div className="registration_style">
+          <img src={logo} alt="logo" className="logo_style" />
 
           <h3>Sign up now</h3>
           <p>Welcome back! Please enter your details</p>
@@ -54,10 +50,15 @@ function FormRegister() {
           />
           {errors.password && <p className="error">Password is required</p>}
 
-          <button type="submit" value="Sign Up" >
+          <button type="submit" value="Sign Up">
             Sign Up
           </button>
-        </span>
+        </div>
+        <div className="rounded-video">
+          <video autoPlay muted loop>
+            <source src={bg_video} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </form>
   );

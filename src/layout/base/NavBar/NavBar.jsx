@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../../assets/images/logo.svg";
+import logo from "../../../assets/images/logo/logo.svg";
 import { CiShop } from "react-icons/ci";
 import "./NavBar.scss";
 import { Link } from "react-router-dom";
