@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { getUser } from "../slice/getUser/getUser";
+import { getUser } from "../store/slice/getUser/getUser";
 
 export const store = configureStore({
   reducer: {
