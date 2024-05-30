@@ -1,10 +1,10 @@
-import React from "react";
-import FormRegister from "../../components/FormRegistration/FormRegister/FormRegister";
+import React from 'react'
+import FormRegister from '../../components/FormComponents/FormRegister/FormRegister'
 
-function ChefRegistration() {
-  return <div>
-     <FormRegister/>
-  </div>;
+function GurmanRG() {
+  return (
+    <FormRegister/>
+  )
 }
 
-export default ChefRegistration;
+export default GurmanRG
