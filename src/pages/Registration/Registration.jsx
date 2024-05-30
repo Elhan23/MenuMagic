@@ -1,4 +1,4 @@
-import UserCard from "../../components/FormRegistration/UserCard/UserCard";
+import UserCard from "../../components/FormComponents/UserCard/UserCard";
 
 
 function Registration() {

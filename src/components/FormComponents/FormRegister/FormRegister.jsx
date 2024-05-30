@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { getUser } from "../../../store/slice/getUser/getUser";
+import { getUser } from "../../../store/actions/getUser/getUser";
 import { useDispatch } from "react-redux";
 import "./FormRegister.scss";
 import logo from "../../../assets/images/logo/logo.svg";
