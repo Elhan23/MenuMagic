@@ -1,8 +1,11 @@
-import UserCard from "../../components/FormComponents/UserCard/UserCard";
+import FormRegister from "../../components/FormComponents/FormRegister/FormRegister";
+
 
 
 function Registration() {
-  return <UserCard />;
+  return (
+    <FormRegister/>
+  )
 }
 
 export default Registration;

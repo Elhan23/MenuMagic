@@ -8,6 +8,7 @@ function Layout({ children }) {
   const showLayout = !["/registration"].includes(location.pathname);
   const showLayout2 = !["/gurmanlogin"].includes(location.pathname);
   const showLayout3 = !["/cooklogin"].includes(location.pathname);
+  const showLayout4 = !["/shop"].includes(location.pathname);
 
   if (!showLayout) {
     return <>{children}</>;
@@ -17,6 +18,9 @@ function Layout({ children }) {
   }
   if (!showLayout3) {
     return <>{children}</>;
+  }
+  if(!showLayout4) {
+     return <>{children}</>
   }
 
 

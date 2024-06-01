@@ -1,0 +1,49 @@
+@import "../../scss/variable";
+
+.about_global_style {
+  .about_text {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+
+    & h2 {
+      font-family: $font-roboto;
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 100%;
+    }
+  }
+
+  .paragraf_style {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & p {
+      font-family: $font-roboto;
+      font-size: 18px;
+      color: grey;
+    }
+
+    & button {
+      width: 166px;
+      height: 38px;
+      border-radius: 24px;
+      border: none;
+      background-color: $text-color;
+    }
+  }
+
+  .convenient_style {
+     display: flex;
+     margin-top: 150px;
+     justify-content: space-between;
+     align-items: center;
+
+     .text_convenient{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+     }
+  }
+}

@@ -1,8 +1,0 @@
-.border_culinary{
-  $grid-width: 100rem; 
-  $gutter-vertical: 4rem; 
-  $gutter-horizontal: 4rem; 
-  .col-1-of-2 {
-    width: calc((100% - $gutter-horizontal) / 2);
-  }
-}
