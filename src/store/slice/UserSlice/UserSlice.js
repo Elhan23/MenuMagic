@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getUser } from '../../actions/getUser/getUser';
+import { setJWTToken } from '../SliceJwt/SliceJwt'; 
 
 const userSlice = createSlice({
   name: 'user',
   initialState: {
     loading: false,
     user: null,
+    jwtToken: null, 
     error: ''
   },
   reducers: {},
@@ -17,7 +19,11 @@ const userSlice = createSlice({
       })
       .addCase(getUser.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload;
+        state.user = action.payload.userData; 
+        state.jwtToken = action.payload.jwtToken; 
+        if (action.payload.jwtToken) {
+          dispatch(setJWTToken(action.payload.jwtToken));
+        }
       })
       .addCase(getUser.rejected, (state, action) => {
         state.loading = false;
