@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px;
-  height: 100vh;
+  padding: 80px;
+  height: 120vh;
   background-color: #f0f2f5;
 
   .form_inp_style {
@@ -77,6 +77,8 @@
 
         &:hover {
           background-color: #ff6a00;
+          transition: 0.5s;
+          color: #ccc;
         }
       }
 
@@ -95,18 +97,20 @@
       }
 
       .radio_button {
-        border: 1px solid;
+        border: 1px #ff6a00 solid;
         display: flex;
         align-items: center;
-        gap: 10px;
+      
         width: 150px;
         padding: 10px;
         border-radius: 12px;
         cursor: pointer;
 
         &.selected {
-          background-color: #ff6a00;
-          color: white;
+          background-color: #fec566;
+          & span {
+            color: white;
+          }
         }
 
         input[type="checkbox"] {
@@ -115,6 +119,7 @@
 
         span {
           flex: 1;
+          color: grey;
           text-align: center;
         }
       }

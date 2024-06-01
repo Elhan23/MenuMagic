@@ -4,6 +4,8 @@ import { getUser } from "../../../store/actions/getUser/getUser";
 import { useDispatch } from "react-redux";
 import "./FormRegister.scss";
 import registrationvd from "../../../assets/video/registration.mp4";
+import { PiChefHatDuotone } from "react-icons/pi";
+import { CiUser } from "react-icons/ci";
 import logo from "../../../assets/images/icons/logo.svg";
 
 function FormRegister() {
@@ -45,25 +47,25 @@ function FormRegister() {
             placeholder="Name"
             {...register("name", { required: true })}
           />
-          {errors.name && <span>This field is required</span>}
+          {errors.name && <span>fill in the field</span>}
           <input
             type="text"
             placeholder="Surname"
             {...register("surname", { required: true })}
           />
-          {errors.surname && <span>This field is required</span>}
+          {errors.surname && <span>fill in the field</span>}
           <input
             type="email"
             placeholder="Email"
             {...register("email", { required: true })}
           />
-          {errors.email && <span>This field is required</span>}
+          {errors.email && <span>fill in the field</span>}
           <input
             type="password"
             placeholder="Password"
             {...register("password", { required: true })}
           />
-          {errors.password && <span>This field is required</span>}
+          {errors.password && <span>fill in the field</span>}
 
           <div className="radio_style">
             <label
@@ -72,6 +74,7 @@ function FormRegister() {
               }`}
               onClick={() => handleCheckboxChange("user")}
             >
+              <CiUser />
               <input
                 type="checkbox"
                 value="user"
@@ -86,6 +89,7 @@ function FormRegister() {
               }`}
               onClick={() => handleCheckboxChange("chef")}
             >
+              <PiChefHatDuotone />
               <input
                 type="checkbox"
                 value="chef"
@@ -95,7 +99,7 @@ function FormRegister() {
               <span>Chef</span>
             </label>
           </div>
-          {errors.role && <span>This field is required</span>}
+          {errors.role && <span>fill in the field</span>}
 
           <button type="submit">Sign Up</button>
         </section>
