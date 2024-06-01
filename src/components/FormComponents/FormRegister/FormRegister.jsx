@@ -7,6 +7,7 @@ import registrationvd from "../../../assets/video/registration.mp4";
 import { PiChefHatDuotone } from "react-icons/pi";
 import { CiUser } from "react-icons/ci";
 import logo from "../../../assets/images/icons/logo.svg";
+import GoogleLogin from "./GoogleLogin";
 
 function FormRegister() {
   const dispatch = useDispatch();
@@ -26,6 +27,10 @@ function FormRegister() {
   const handleCheckboxChange = (value) => {
     setSelectedRole(value);
     setValue("role", value);
+  };
+
+  const responseGoogle = (response) => {
+    console.log(response);
   };
 
   return (

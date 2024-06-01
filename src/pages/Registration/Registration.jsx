@@ -1,10 +1,10 @@
-import FormRegister from "../../components/FormComponents/FormRegister/FormRegister";
+import FormComponents from '../../components/FormComponents/FormRegister/FormRegister'
 
 
 
 function Registration() {
   return (
-    <FormRegister/>
+    <FormComponents/>
   )
 }
 
