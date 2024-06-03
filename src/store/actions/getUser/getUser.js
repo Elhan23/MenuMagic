@@ -6,7 +6,7 @@ export const getUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/",
+        "http://localhost:3000",
         userData
       );
       const jwtToken = res.headers.authorization;
