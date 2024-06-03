@@ -1,13 +1,11 @@
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { getUser } from "../../../store/actions/getUser/getUser";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import "./FormRegister.scss";
-import registrationvd from "../../../assets/video/registration.mp4";
 import { PiChefHatDuotone } from "react-icons/pi";
 import { CiUser } from "react-icons/ci";
 import logo from "../../../assets/images/icons/logo.svg";
-import GoogleLogin from "./GoogleLogin";
+import { getUser } from "../../../store/actions/getUser/getUser";
 
 function FormRegister() {
   const dispatch = useDispatch();
@@ -18,10 +16,15 @@ function FormRegister() {
     setValue,
   } = useForm();
 
-  const [selectedRole, setSelectedRole] = useState("");
+  const [selectedRole, setSelectedRole] = useState(null);
 
-  const onSubmit = (data) => {
-    console.log(dispatch(getUser(data)));
+  const onSubmit = async (data) => {
+    try {
+      console.log(data);
+      dispatch(getUser(data));
+    } catch {
+      console.log("error");
+    }
   };
 
   const handleCheckboxChange = (value) => {
@@ -29,48 +32,65 @@ function FormRegister() {
     setValue("role", value);
   };
 
-  const responseGoogle = (response) => {
-    console.log(response);
-  };
-
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form_style">
       <section className="form_inp_style">
-        <span>
-          <video autoPlay muted loop>
-            <source src={registrationvd} />
-          </video>
-        </span>
-
         <section className="input_style">
           <span className="logo_style">
             <img src={logo} alt="logo" />
             <p>Welcome back! Please enter your details</p>
           </span>
-          <input
-            type="text"
-            placeholder="Name"
-            {...register("name", { required: true })}
-          />
-          {errors.name && <span>fill in the field</span>}
-          <input
-            type="text"
-            placeholder="Surname"
-            {...register("surname", { required: true })}
-          />
-          {errors.surname && <span>fill in the field</span>}
-          <input
-            type="email"
-            placeholder="Email"
-            {...register("email", { required: true })}
-          />
-          {errors.email && <span>fill in the field</span>}
-          <input
-            type="password"
-            placeholder="Password"
-            {...register("password", { required: true })}
-          />
-          {errors.password && <span>fill in the field</span>}
+
+          <div className="input_grid">
+            <div className="input_field">
+              <input
+                type="text"
+                placeholder="Name"
+                {...register("name", { required: true })}
+              />
+              {errors.name && <span>Fill in the field</span>}
+            </div>
+            <div className="input_field">
+              <input
+                type="text"
+                placeholder="Surname"
+                {...register("surname", { required: true })}
+              />
+              {errors.surname && <span>Fill in the field</span>}
+            </div>
+            <div className="input_field">
+              <input
+                type="text"
+                placeholder="Username"
+                {...register("username", { required: true })}
+              />
+              {errors.username && <span>Fill in the field</span>}
+            </div>
+            <div className="input_field">
+              <input
+                type="text"
+                placeholder="Phone number"
+                {...register("phonenumber", { required: true })}
+              />
+              {errors.phonenumber && <span>Fill in the field</span>}
+            </div>
+            <div className="input_field">
+              <input
+                type="email"
+                placeholder="Email"
+                {...register("email", { required: true })}
+              />
+              {errors.email && <span>Fill in the field</span>}
+            </div>
+            <div className="input_field">
+              <input
+                type="password"
+                placeholder="Password"
+                {...register("password", { required: true })}
+              />
+              {errors.password && <span>Fill in the field</span>}
+            </div>
+          </div>
 
           <div className="radio_style">
             <label
@@ -79,7 +99,9 @@ function FormRegister() {
               }`}
               onClick={() => handleCheckboxChange("user")}
             >
-              <CiUser />
+              <span className="icons_style">
+                <CiUser />
+              </span>
               <input
                 type="checkbox"
                 value="user"
@@ -94,7 +116,9 @@ function FormRegister() {
               }`}
               onClick={() => handleCheckboxChange("chef")}
             >
-              <PiChefHatDuotone />
+              <span className="icons_style">
+                <PiChefHatDuotone />
+              </span>
               <input
                 type="checkbox"
                 value="chef"
@@ -104,7 +128,7 @@ function FormRegister() {
               <span>Chef</span>
             </label>
           </div>
-          {errors.role && <span>fill in the field</span>}
+          {errors.role && <span>Fill in the field</span>}
 
           <button type="submit">Sign Up</button>
         </section>
