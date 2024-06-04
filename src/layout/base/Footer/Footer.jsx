@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 import logofooter from "../../../assets/images/footerimg/logofooter.svg";

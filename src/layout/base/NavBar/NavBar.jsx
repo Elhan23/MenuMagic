@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../../../assets/images/icons/logo.svg";
 import { CiShop } from "react-icons/ci";
 import "./NavBar.scss";
-import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -17,7 +17,7 @@ function NavBar() {
           <ul>
             <li>
               <NavLink
-                className={({ isActive }) => [isActive ? "active" : ""]}
+                className={({ isActive }) => (isActive ? "active" : "")}
                 to="/"
               >
                 Home
@@ -25,7 +25,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => [isActive ? "active" : ""]}
+                className={({ isActive }) => (isActive ? "active" : "")}
                 to="/recipe"
               >
                 Recipe
@@ -33,7 +33,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => [isActive ? "active" : ""]}
+                className={({ isActive }) => (isActive ? "active" : "")}
                 to="/aboutus"
               >
                 About Us
@@ -41,7 +41,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => [isActive ? "active" : ""]}
+                className={({ isActive }) => (isActive ? "active" : "")}
                 to="/chef"
               >
                 Chef
@@ -49,7 +49,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                className={({ isActive }) => [isActive ? "active" : ""]}
+                className={({ isActive }) => (isActive ? "active" : "")}
                 to="/contactus"
               >
                 Contact Us
