@@ -1,6 +1,10 @@
 .navbar_style {
   display: flex;
   align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  margin-top: 40px;
+  border-radius: 32px;
   justify-content: space-between;
 
   ul {
@@ -13,13 +17,41 @@
 
     & a {
       text-decoration: none;
+      font-family: "Roboto", Roboto;
+      font-weight: 400;
+      color: black;
+    }
+    .active {
+      color: orange;
+      transition: 0.3s;
     }
   }
 
+  .logo_text_style {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
-  .logo_text_style{
-     display: flex;
-     align-items: center;
-     gap: 20px;
+    & p {
+      font-family: "Roboto", Roboto;
+      color: black;
+    }
+  }
+
+  .logshop_style {
+    display: flex;
+    align-items: center;
+
+    & button {
+      padding: 10px 30px;
+      color: white;
+      border-radius: 24px;
+      border: none;
+      background-color: black;
+    }
+  }
+
+  .shop_img {
+    font-size: 1.5rem;
   }
 }

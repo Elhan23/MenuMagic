@@ -1,13 +1,11 @@
-import React from 'react'
+import FormComponents from '../../components/FormComponents/FormRegister/FormRegister'
+
+
 
 function Registration() {
   return (
-      <div>
-          <form>
-                <input type="name" />
-          </form>
-      </div>
+    <FormComponents/>
   )
 }
 
-export default Registration
+export default Registration;
