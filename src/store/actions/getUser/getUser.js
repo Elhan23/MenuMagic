@@ -6,7 +6,7 @@ export const getUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000",
+        "https://magicmenu-22e6224ad3f4.herokuapp.com/api/registration",
         userData
       );
       const jwtToken = res.headers.authorization;
