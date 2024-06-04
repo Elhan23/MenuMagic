@@ -1,14 +1,22 @@
 import React from "react";
-import Main from "../../components/Main/Main";
+import HeroCompoents from "../../components/HomeComponents/HeroCompoents/HeroCompoents";
+import HomeSection from "../../components/HomeComponents/HomeSection/HomeSection";
+import SectionDish from "../../components/HomeComponents/SectionDish/SectionDish";
 
-function HomeMenu() {
+
+function HomePages() {
   return (
-    <div>
+    <main className="container">
+      <HeroCompoents />
+      <HomeSection />
+      <SectionDish />
       <div>
-        <Main />
+        <span>SUBSRIBE</span>
+        <h2></h2>
+        <p></p>
       </div>
-    </div>
+    </main>
   );
 }
 
-export default HomeMenu;
+export default HomePages;

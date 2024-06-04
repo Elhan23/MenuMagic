@@ -1,9 +1,9 @@
-import React from 'react'
+import ShopSearch from '../../components/ShopComponents/ShopSearch'
 
 function Shop() {
   return (
-    <div>
-       Shop
+    <div className='container'>
+       <ShopSearch/>
     </div>
   )
 }
