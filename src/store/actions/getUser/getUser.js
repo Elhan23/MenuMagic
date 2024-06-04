@@ -5,7 +5,10 @@ export const getUser = createAsyncThunk(
   "user/getUser",
   async (userData, { rejectWithValue }) => {
     try {
-      const res = await axios.post(process.env.USER_POST_ZAPROS, userData);
+      const res = await axios.post(
+        "https://magicmenu-22e6224ad3f4.herokuapp.com/api/registration",
+        userData
+      );
       const jwtToken = res.headers.authorization;
       return { userData: res.data, jwtToken };
     } catch (error) {

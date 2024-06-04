@@ -1,10 +1,11 @@
 import React from 'react'
+import AboutComponents from '../../components/AboutComponents/AboutComponents'
 
 function AboutUs() {
   return (
-    <div>
-        About US
-    </div>
+    <main className='container'>
+       <AboutComponents/>
+    </main>
   )
 }
 

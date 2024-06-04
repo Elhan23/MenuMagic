@@ -1,42 +1,67 @@
-import React from "react";
-import logo from "../../../assets/images/logo.png";
+import { NavLink } from "react-router-dom";
+import logo from "../../../assets/images/icons/logo.svg";
 import { CiShop } from "react-icons/ci";
 import "./NavBar.scss";
 import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav className="navbar_style container">
-      <div className="logo_text_style">
-        <img src={logo} alt="logo" />
-        <p>Menu Magic</p>
-      </div>
+    <nav className="container">
+      <div className="navbar_style">
+        <div className="logo_text_style">
+          <img src={logo} alt="logo" />
+          <p>Menu Magic</p>
+        </div>
 
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/recipe">Recipe</Link>
-          </li>
-          <li>
-            <Link to="/aboutus">About Us</Link>
-          </li>
-          <li>
-            <Link to="/contactus">Chef</Link>
-          </li>
-          <li>
-            <Link to="">Contact Us</Link>
-          </li>
-        </ul>
-      </div>
+        <div>
+          <ul>
+            <li>
+              <NavLink
+                className={({ isActive }) => [isActive ? "active" : ""]}
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => [isActive ? "active" : ""]}
+                to="/recipe"
+              >
+                Recipe
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => [isActive ? "active" : ""]}
+                to="/aboutus"
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => [isActive ? "active" : ""]}
+                to="/chef"
+              >
+                Chef
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => [isActive ? "active" : ""]}
+                to="/contactus"
+              >
+                Contact Us
+              </NavLink>
+            </li>
+          </ul>
+        </div>
 
-      <div>
-        <ul>
+        <ul className="logshop_style">
           <li>
             <Link to="/shop">
-              <CiShop />
+              <CiShop className="shop_img" />
             </Link>
           </li>
           <li>
