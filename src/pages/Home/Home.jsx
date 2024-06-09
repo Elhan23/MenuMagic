@@ -10,13 +10,6 @@ function HomePages() {
       <HeroCompoents />
       <HomeSection />
       <SectionDish />
-     
-
-      <div>
-        <span>SUBSRIBE</span>
-        <h2></h2>
-        <p></p>
-      </div>
     </main>
   );
 }

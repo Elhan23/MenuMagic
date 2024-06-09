@@ -8,34 +8,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.hero_text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 30px;
-  align-items: center;
-
-  & h1 {
+  .hero_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    align-items: center;
     font-family: "Roboto", Roboto;
-    font-size: 70px;
     font-weight: bold;
-    color: #f0ebe1;
-  }
+    & h1 {
+      font-size: 70px;
+      font-weight: bold;
+      color: #f0ebe1;
+    }
 
-  & p {
-    color: white;
-    font-family: "Roboto", Roboto;
-    font-size: 18px;
-  }
+    & p {
+      color: white;
+      font-size: 18px;
+    }
 
-  & button {
-    background-color: #f29c33;
-    border-radius: 24px;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
+    & button {
+      background-color: #f29c33;
+      border-radius: 24px;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+    }
   }
 }
