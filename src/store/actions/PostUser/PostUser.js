@@ -1,18 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const getUser = createAsyncThunk(
-  "user/getUser",
-  async (userData, { rejectWithValue }) => {
+export const PostUser = createAsyncThunk(
+  "user/PostUser",
+  async ({ data, navigate }, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        "https://magicmenu-22e6224ad3f4.herokuapp.com/api/registration",
-        userData
+        "https://magicmenu-22e6224ad3f4.herokuapp.com/api/all",
+        data
       );
       const jwtToken = res.headers.authorization;
+      navigate("/login"); 
       return { userData: res.data, jwtToken };
     } catch (error) {
-      return rejectWithValue(error.response.data);
+      return rejectWithValue(error.response.data || error.message);
     }
   }
 );
@@ -30,29 +31,29 @@ const userSlice = createSlice({
       state.jwtToken = action.payload;
       localStorage.setItem("jwtToken", action.payload);
     },
+    clearUserData(state) {
+      state.user = null;
+      state.jwtToken = null;
+      localStorage.removeItem("jwtToken");
+    },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getUser.pending, (state) => {
+      .addCase(PostUser.pending, (state) => {
         state.loading = true;
         state.error = "";
       })
-      .addCase(getUser.fulfilled, (state, action) => {
+      .addCase(PostUser.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload.userData;
-        state.jwtToken = action.payload.jwtToken;
-        if (action.payload.jwtToken) {
-          state.jwtToken = action.payload.jwtToken;
-          localStorage.setItem("jwtToken", action.payload.jwtToken);
-        }
       })
-      .addCase(getUser.rejected, (state, action) => {
+      .addCase(PostUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
   },
 });
 
-export const { setJWTToken } = userSlice.actions;
+export const { setJWTToken, clearUserData } = userSlice.actions;
 
 export default userSlice.reducer;
