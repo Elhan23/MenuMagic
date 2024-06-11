@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer, { getUser } from "../store/actions/getUser/getUser";
+import PostUser from "../store/actions/PostUser/PostUser";
+import { UserLogin } from "./actions/UserLogin/UserLogin";
 
 export const store = configureStore({
   reducer: {
-    user: userReducer,
+    user: PostUser,
+    login: UserLogin,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(false),
 });

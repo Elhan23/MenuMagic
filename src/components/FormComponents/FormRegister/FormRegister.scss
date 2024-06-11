@@ -1,4 +1,4 @@
-@import "../../../scss/variable.scss";
+@import "../../../../scss/variable.scss";
 
 .form_style {
   display: flex;
@@ -78,6 +78,7 @@
         background-color: orange;
         color: white;
         border: none;
+        width: 300px;
         border-radius: 8px;
         font-size: 16px;
         cursor: pointer;
@@ -90,10 +91,13 @@
         }
       }
 
+      & p {
+        font-family: $font-roboto;
+      }
+
       & span {
         color: red;
         font-size: 14px;
-        font-weight: bold;
         font-family: $font-roboto;
       }
 

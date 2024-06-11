@@ -9,6 +9,7 @@ function Layout({ children }) {
   const showLayout2 = !["/gurmanlogin"].includes(location.pathname);
   const showLayout3 = !["/cooklogin"].includes(location.pathname);
   const showLayout4 = !["/shop"].includes(location.pathname);
+  const showLayout5 = !["/login"].includes(location.pathname);
 
   if (!showLayout) {
     return <>{children}</>;
@@ -20,6 +21,9 @@ function Layout({ children }) {
     return <>{children}</>;
   }
   if(!showLayout4) {
+     return <>{children}</>
+  }
+  if(!showLayout5) {
      return <>{children}</>
   }
 
