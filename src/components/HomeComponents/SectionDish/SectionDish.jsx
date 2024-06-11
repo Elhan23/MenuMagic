@@ -10,7 +10,7 @@ import CardComponents from "../CardComponents/CardComponents";
 
 function SectionDish() {
   return (
-    <section>
+    <section className="container">
       <div className="section_dish">
         <div className="recipe_description">
           <span>RECIPES</span>

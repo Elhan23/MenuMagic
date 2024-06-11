@@ -10,11 +10,14 @@ function HomePages() {
       <HeroCompoents />
       <HomeSection />
       <SectionDish />
+<<<<<<< HEAD
+=======
       <div>
         <span>SUBSRIBE</span>
         <h2></h2>
         <p></p>
       </div>
+>>>>>>> 19d90a8734492daffbe940cf1d3477e98014a62f
     </main>
   );
 }

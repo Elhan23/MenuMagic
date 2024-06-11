@@ -4,7 +4,7 @@ import '../SectionDish/SectionDish.scss'
 
 function CardComponents({title, recipeimg, description, time, serves}) {
   return (
-    <>
+    <section>
       <div className="card">
         <div className="recipeimg_style">
           <img src={recipeimg} alt="" />
@@ -22,7 +22,7 @@ function CardComponents({title, recipeimg, description, time, serves}) {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

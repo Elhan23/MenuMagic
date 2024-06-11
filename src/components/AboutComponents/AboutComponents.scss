@@ -1,4 +1,4 @@
-@import "../../scss/variable";
+@import "../../../scss/variable";
 
 .about_global_style {
   .about_text {
@@ -37,7 +37,7 @@
   .convenient_style {
     margin-top: 170px;
     border: 1px solid;
-    padding: 20px;
+    padding: 30px;
     border-radius: 32px;
 
     .flex_about {
@@ -82,11 +82,12 @@
       .image_style_ab {
         display: flex;
         margin-top: 20px;
+        justify-content: center;
         align-items: center;
         gap: 20px;
 
         & img {
-          width: 265px;
+          width: 23%;
           height: auto;
         }
       }

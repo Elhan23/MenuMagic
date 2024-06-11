@@ -8,7 +8,7 @@
 .container {
   max-width: 1352px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 
 body {
@@ -19,3 +19,48 @@ body {
   padding-top: 30px;
   margin: 0;
 }
+
+.swiper {
+  max-width: 800px;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+  .swiper-button-prev {
+    color: #000; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: orange; 
+      transform: scale(1.1); 
+      color: white;
+    }
+
+    &:after {
+      font-size: 20px; 
+    }
+  }
